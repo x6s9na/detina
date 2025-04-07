@@ -6,7 +6,7 @@ from sqlalchemy.orm import sessionmaker, declarative_base
 # переменные окружения
 load_dotenv()
 
-DATABASE_URL = f"postgresql+asyncpg://{os.getenv('DB_USER')}:{os.getenv('DB_PASS')}@{os.getenv('DB_HOST')}:{os.getenv('DB_PORT')}/{os.getenv('DB_NAME')}"
+DATABASE_URL = "postgresql+asyncpg://postgres:password@localhost/chat_db"
 
 engine = create_async_engine(DATABASE_URL, echo=True)
 
